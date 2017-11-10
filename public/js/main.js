@@ -16,7 +16,7 @@ function initializeStreamListener() {
     if (messages) {
       Object.keys(messages).forEach(function (key) {
         const message = messages[key];
-        $('#stream').append(`<div>${message.author}: ${message.authorPic}:${message.body}</div>`);
+        $('#stream').append(`<div>${message.author}: <img src=${message.authorPic} width= '50px'/> :${message.body}</div>`);
       });
     }
   });
@@ -51,16 +51,8 @@ function handleMessageFormSubmit() {
   $('#new-post-body').val('');
   $('#new-post-title').val('');
 }
-function addAuthorImage(){
-var img = new Image();
-var div = document.getElementById('foo');
+'BaseWebApp/public/images/authorImage.jpg';
 
-img.onload = function() {
-  div.appendChild(img);
-};
-
-img.src = 'path/to/image.jpg';
-}
 // Gets called whenever the user clicks "sign in" or "sign out".
 function toggleSignIn() {
   if (!firebase.auth().currentUser) { // if no user, handle login
