@@ -48,6 +48,8 @@ function handleMessageFormSubmit() {
   var title = $('#new-post-title').val();
 
   addMessage(body, title);
+  $('#new-post-body').val('');
+  $('#new-post-title').val('');
 }
 
 // Gets called whenever the user clicks "sign in" or "sign out".
