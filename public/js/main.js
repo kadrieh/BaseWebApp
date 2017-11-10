@@ -46,8 +46,10 @@ function addMessage(body, title) {
 function handleMessageFormSubmit() {
   var body = $('#new-post-body').val();
   var title = $('#new-post-title').val();
+  var author = $('#new-post-author').val();
+  var authorPic = $('#new-post-authorPic').val();
 
-  addMessage(body, title);
+  addMessage(body, title, author, authorPic);
   $('#new-post-body').val('');
   $('#new-post-title').val('');
 }
